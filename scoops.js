@@ -1,7 +1,7 @@
 var scoops = 5;
 while (scoops > 0) {
     document.write("Another scoop!<br>");
-    scoops = scoops - 1; 
+    scoops = scoops - 1;
 }
 document.write("Life without ice cream isn't the same");
 
@@ -19,4 +19,4 @@ if (scoops >= 5) {
     alert("Still lots of ice cream left, come and get it.");
 }
 
-    
+
