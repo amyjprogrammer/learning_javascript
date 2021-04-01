@@ -11,3 +11,11 @@ bark("spot", 13);
 bark("tristan", 15);
 bark("Archimedes", 23);
 bark("Tinkerbell", 5);
+
+function doIt(param) {
+    param = 2;
+}
+
+var test = 1;
+doIt(test);
+console.log(test);
