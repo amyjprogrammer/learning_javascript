@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Fido!</title>
+    
+  </head>
+  <body>
+      
+      <script>
+          var fido = {
+              name: "Fido",
+              weight : 20.2,
+              age: 4,
+              breed: "mixed",
+              activity: "fetch balls"
+          };
+          
+          var bark;
+          if (fido.weight > 20) {
+              bark = "WOOF WOOF";
+          }else {
+              bark = "woof woof";
+          }
+          
+          var speak = fido.name + " says " + bark + " when he wants to " + fido.activity;
+          console.log (speak)
+      
+      </script>
+    
+    
+  </body>
+</html>
