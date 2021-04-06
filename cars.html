@@ -47,7 +47,24 @@
             color: "Medium Blue",
             passengers: 2,
             convertible: false,
-            mileage: 88000
+            mileage: 88000,
+            started: false,
+            
+            start: function() {
+                this.started = true;
+            },
+            
+            stop: function() {
+                this.started = false;
+            },
+            
+            drive: function() {
+                if (this.started) {
+                    alert ("Zoom zoom!");
+                } else {
+                    alert("Please start the engine first.");
+                }
+            }
         }
         
         function prequalify(car) {
@@ -67,6 +84,11 @@
         } else {
             console.log ("You should really pass on the " + taxi.make + " " + taxi.model);
         }
+        
+        fiat.drive();
+        fiat.start();
+        fiat.drive();
+        fiat.stop();
         
     </script>
       
