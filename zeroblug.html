@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>Testing Image</title>
+      <style> body { margin: 20px; } </style>
+  </head>
+  <body>
+    <script>
+        window.onload = init;
+        function init() {
+            var image = document.getElementById("zero");
+            image.onclick = showAnswer;
+        }
+        function showAnswer(){
+            var image = document.getElementById("zero");
+            image.src = "zero.jpg";
+        }
+    </script>
+      <img id="zero" src="zeroblur.jpg">
+  </body>
+</html>
