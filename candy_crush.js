@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     // Drag the candies
+    let colorBeingDragged
+    
     squares.forEach(square => square.addEventListener('dragstart', dragStart))
     squares.forEach(square => square.addEventListener('dragend', dragEnd))
     squares.forEach(square => square.addEventListener('dragover', dragOver))
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     squares.forEach(square => square.addEventListener('drop', dragDrop))
     
     function dragStart(){
-        
+        colorBeingDragged = this.style.backgroundColor
     }
     
     function dragEnd(){
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function dragDrop(){
-        
+        colorBeingReplaced = this.style.backgroundColor
     }
          
 })
