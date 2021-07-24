@@ -47,7 +47,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function dragEnd(){
-        
+        let validMoves = [
+            squareIdBeingDragged -1,
+            squareIdBeingDragged -width,
+            squareIdBeingDragged +1,
+            squareIdBeingDragged +width
+    }
+            
+    let validMove = validMoves.includes(squareIdBeingReplaced)
+    
+    if (squareIdBeingReplaced && validMove) {
+        squareIdBeingReplaced = null
+    } else if (squareIdBeingReplaced && !validMove) {
+        squares[squareIdBeingReplaced].style.backgroundColor = colorBeingReplaced
+        squares[squareIdBeingDragged].sytle.backgroundColor = colorBeingDragged 
+    } else squares[squaresIdBeingDragged].style.backgroundColor = colorBeingDraged
     }
     
     function dragOver(e){
